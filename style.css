@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+p{
+    padding: 10px;
+}
+
+section{
+    width: 100px;
+}
+
+.menu-header{
+    background-color: blanchedalmond;
+}
+
+.menu-header:hover{
+    cursor: pointer;
+}
+
+.menu-main{
+    height: 0; 
+    overflow: hidden;
+}
+
+.menu-main.active{
+    height: auto;
+}
+
+.menu-main-item:hover {
+    color:chocolate;
+    cursor: pointer;
+}
+
+.menu-main.active p:hover {
+    background-color: burlywood;
+}
+.menu-main.active p{
+    animation: slide 0.3s ease-in-out;
+    animation-delay: calc(var(--i)*0.1s);
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(-100%);
+}
+    to{
+        transform: translateX(0%);
+        visibility: visible;
+}
+}
